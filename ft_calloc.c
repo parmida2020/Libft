@@ -6,11 +6,12 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 13:10:20 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/22 14:06:30 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/22 15:34:59 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
 void *ft_calloc(size_t nmemb, size_t size)
 {
@@ -18,8 +19,10 @@ void *ft_calloc(size_t nmemb, size_t size)
     unsigned char *tmp;
 
     i = 0;
+    if (nmemb != 0 && size > SIZE_MAX / nmemb)
+        return (NULL);
     tmp = malloc(nmemb * size);
-    if (tmp = NULL)
+    if (tmp == NULL)
         return (NULL);
     while (i < size * nmemb)
     {
@@ -28,6 +31,22 @@ void *ft_calloc(size_t nmemb, size_t size)
     }
     return (tmp);
 }
+int main (void)
+{
+    void *a = ft_calloc(SIZE_MAX, SIZE_MAX);
+    void *b = calloc(SIZE_MAX, SIZE_MAX);
 
-//if (nmemb == 0 || size == 0)
-//    return ();
+    printf("ft_calloc: %p\n", a);
+    printf("calloc   : %p\n", b);
+
+    if (a == NULL && b == NULL)
+        printf("✅ Both returned NULL\n");
+    else if (a == NULL && b != NULL)
+        printf("❌ Your ft_calloc is correct, libc is weird (rare)\n");
+    else if (a != NULL && b == NULL)
+        printf("❌ Your ft_calloc is WRONG (missing overflow check)\n");
+    else
+        printf("❌ Both failed to detect overflow\n");
+
+    return 0;
+}
