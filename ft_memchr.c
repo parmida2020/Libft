@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/15 19:32:51 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/20 17:04:46 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/04/20 19:24:40 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/04/21 18:30:02 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	len_s;
-	size_t	len_d;
 	size_t	i;
 
-	len_s = ft_strlen((char *)src);
-	len_d = ft_strlen(dst);
 	i = 0;
-	if (len_d >= size)
-		return (len_d + len_s);
-	while (src[i] && (len_d + i) < (size - 1))
+	while (i < n)
 	{
-		dst[len_d + i] = src[i];
+		if (((const unsigned char *)s)[i] == (unsigned char)c)
+			return ((void *)((const unsigned char *)s) + i);
 		i++;
 	}
-	dst[len_d + i] = '\0';
-	return (len_d + len_s);
+	return (NULL);
 }
-//int main(void)
+//int main (void)
 //{
-//	char str1[40] = "ASDF";
-//	const char str2[30] = "5";
-//	printf("final string : %zu", ft_strlcat(str1, str2, 2));
+//    char str1[50] = "Hello Mida";
+//    char *mtptr = (char *)ft_memchr(str1, 'e', 10);
+//    char *ptr = (char *)memchr(str1, 'e', 10);
+//    printf ("%s\n", ptr);
+//    printf ("%s\n", mtptr);
 //}

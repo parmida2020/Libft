@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/16 16:37:02 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/20 17:01:03 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/04/22 13:10:20 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/04/22 14:06:30 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
+    size_t  i;
+    unsigned char *tmp;
 
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	if (s[i] == c)
-		return ((char *)&s[i]);
-	return (0);
+    i = 0;
+    tmp = malloc(nmemb * size);
+    if (tmp = NULL)
+        return (NULL);
+    while (i < size * nmemb)
+    {
+        tmp[i] = 0;
+        i++;
+    }
+    return (tmp);
 }
-//int main(void)
-//{
-//	char str[30] = "abcdefghijklmnop";
-//	printf("%s\n", strchr(str, 'h'));
-//	printf("%s\n", ft_strchr(str, 'h'));
 
-//}
+//if (nmemb == 0 || size == 0)
+//    return ();

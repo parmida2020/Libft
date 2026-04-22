@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 19:50:26 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/17 16:04:07 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/22 13:51:39 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlen(const char *str)
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int	i;
+	size_t  i;
 
 	i = 0;
 	while (src[i] != '\0')
@@ -47,8 +47,6 @@ char	*ft_strdup(const char *s)
 		return (NULL);
 	return (ft_strcpy(dup, s));
 }
-
-//#include <stdio.h>
 //int main()
 //{
 //    char source[] = "HELLO WORLD !!!!\n";

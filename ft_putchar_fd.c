@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/16 16:37:02 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/20 17:01:03 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/04/21 20:29:16 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/04/21 20:45:43 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	if (s[i] == c)
-		return ((char *)&s[i]);
-	return (0);
+	write(fd, &c, 1);
 }
-//int main(void)
-//{
-//	char str[30] = "abcdefghijklmnop";
-//	printf("%s\n", strchr(str, 'h'));
-//	printf("%s\n", ft_strchr(str, 'h'));
-
-//}
