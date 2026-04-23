@@ -1,43 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/15 19:50:26 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/23 17:54:40 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/04/23 18:09:52 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/04/23 20:10:43 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest,const char *src)
+static size_t	in_set(char c, char const *set)
 {
-	size_t  i;
+	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (set[i])
 	{
-		dest[i] = src[i];
+		if (set[i] == c)
+			return (1);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }
-
-char	*ft_strdup(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*dup;
+	size_t	start;
+	size_t	end;
 
-	dup = malloc((ft_strlen(s) + 1));
-	if (dup == NULL)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
-	return (ft_strcpy(dup, s));
+	start = 0;
+	while (s1[start] && in_set(s1[start], set))
+	{
+		start++;
+	}
+	end = ft_strlen(s1);
+	while (end > start, in_set(s1[end - 1], set))
+	{
+		end--;
+	}
+	
 }
-//int main()
-//{
-//    char source[] = "HELLO WORLD !!!!\n";
-//    char *dest = ft_strdup(source);
-//    printf("%s", dest);
-//}

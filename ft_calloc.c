@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 13:10:20 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/22 15:34:59 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/23 13:42:21 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,20 @@ void *ft_calloc(size_t nmemb, size_t size)
     }
     return (tmp);
 }
-int main (void)
-{
-    void *a = ft_calloc(SIZE_MAX, SIZE_MAX);
-    void *b = calloc(SIZE_MAX, SIZE_MAX);
+//int main (void)
+//{
+//    void *a = ft_calloc(SIZE_MAX, SIZE_MAX);
+//    void *b = calloc(SIZE_MAX, SIZE_MAX);
 
-    printf("ft_calloc: %p\n", a);
-    printf("calloc   : %p\n", b);
+//    printf("ft_calloc: %p\n", a);
+//    printf("calloc   : %p\n", b);
 
-    if (a == NULL && b == NULL)
-        printf("✅ Both returned NULL\n");
-    else if (a == NULL && b != NULL)
-        printf("❌ Your ft_calloc is correct, libc is weird (rare)\n");
-    else if (a != NULL && b == NULL)
-        printf("❌ Your ft_calloc is WRONG (missing overflow check)\n");
-    else
-        printf("❌ Both failed to detect overflow\n");
-
-    return 0;
-}
+//    if (a == NULL && b == NULL)
+//        printf(" Both returned NULL\n");
+//    else if (a == NULL && b != NULL)
+//        printf(" Your ft_calloc is correct, libc is weird (rare)\n");
+//    else if (a != NULL && b == NULL)
+//        printf(" Your ft_calloc is WRONG (missing overflow check)\n");
+//    else
+//        printf(" Both failed to detect overflow\n");
+//}
