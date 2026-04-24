@@ -1,39 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/15 19:32:51 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/24 17:26:42 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/04/24 17:34:52 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/04/24 18:43:54 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len_s;
-	size_t	len_d;
 	size_t	i;
 
-	len_s = ft_strlen((char *)src);
-	len_d = ft_strlen(dst);
+	if (s == NULL || f == NULL)
+		return (NULL);
+	char *new = malloc(ft_strlen(s) + 1);
+	if (new == NULL)
+		return (NULL);
 	i = 0;
-	if (len_d >= size)
-		return (len_d + len_s);
-	while (src[i] && (len_d + i) < (size - 1))
+	while(s[i])
 	{
-		dst[len_d + i] = src[i];
+		new[i] = f(i, s[i]);
 		i++;
 	}
-	dst[len_d + i] = '\0';
-	return (len_d + len_s);
+	new[i] = '\0';
+	return (new);
 }
+
+//char	ft_toup(unsigned int c, char a)
+//{
+//	(void)c;
+//	if (a >= 'a' && a <= 'z')
+//		return (a - ('a' - 'A'));
+//	return (a);
+//}
 //int main(void)
 //{
-//	char str1[40] = "ASDF";
-//	const char str2[30] = "5";
-//	printf("final string : %zu", ft_strlcat(str1, str2, 2));
+//	char *str = "abcde";
+//	char *str2 = ft_strmapi(str, *ft_toup);
+//	printf("%s", str2);
 //}

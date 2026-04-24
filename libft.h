@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 10:45:36 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/23 17:01:53 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/24 17:23:42 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <string.h> //
-# include <stdio.h>  //
+# include <string.h>
+# include <stdio.h>
 # include <stdlib.h>
 
 int		ft_isalpha(int c);
@@ -48,7 +48,7 @@ char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strcpy(char *dest, const char *src);
-char    *ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

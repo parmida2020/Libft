@@ -6,15 +6,15 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 19:50:26 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/23 17:54:40 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/24 16:40:27 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest,const char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	size_t  i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] != '\0')

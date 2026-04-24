@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:45:06 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/23 16:49:13 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/24 12:14:54 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == NULL)
 		return (NULL);
 	slen = ft_strlen(s);
-	if (start >= len)
+	if (start >= slen)
 		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;

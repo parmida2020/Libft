@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:35:15 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/17 16:00:43 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/24 17:25:30 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset (s, '\0', n);
+	ft_memset (s, 0, n);
 }

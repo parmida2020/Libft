@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 15:11:40 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/20 17:03:50 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/24 18:42:11 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	{
 		while (src[i] && i < (size - 1))
 		{
-			dst[i] == src[i];
+			dst[i] = src[i];
 			i++;
 		}
-		dst = '\0';
+		dst[i] = '\0';
 	}
 	return (ft_strlen(src));
 }
@@ -38,6 +38,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 //    printf("content : %d \n", result);
 //    printf("Origina: %d\n", strlcpy(dst, src, 10));
 //}
-
-//when you want to compile the code,
-//first compile ft_strlen then ft_strlcpy
