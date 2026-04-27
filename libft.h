@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 10:45:36 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/24 17:23:42 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/27 15:37:21 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	*ft_calloc(size_t nmemb, size_t size);
 
+char	*ft_itoa(int n);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);

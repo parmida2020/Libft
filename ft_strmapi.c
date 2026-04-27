@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:34:52 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/24 18:43:54 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/24 18:46:53 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 //	char *str2 = ft_strmapi(str, *ft_toup);
 //	printf("%s", str2);
 //}
+//

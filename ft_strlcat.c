@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 19:32:51 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/24 17:26:42 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:56:06 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 //int main(void)
 //{
 //	char str1[40] = "ASDF";
-//	const char str2[30] = "5";
+//	const char str2[30] = "PO";
 //	printf("final string : %zu", ft_strlcat(str1, str2, 2));
 //}
