@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 15:11:40 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/24 18:42:11 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/04/29 11:24:25 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 //int main (void)
 //{
-//    char dst[100] = "wsdfghjdm";
-//    char src[100] = "yde5yc";
+//    char dst[100] = "hello ";
+//    char src[100] = "World";
 //    int result = ft_strlcpy(dst, src, 0);
 
 //    printf("content : %d \n", result);
