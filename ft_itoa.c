@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 13:34:48 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/29 09:57:20 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/04/30 17:47:55 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/04/30 18:23:43 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	len(int nbr)
+static int	len(long nbr)
 {
 	int	count;
 
@@ -31,7 +31,6 @@ static int	len(int nbr)
 	}
 	return (count);
 }
-
 char	*ft_itoa(int n)
 {
 	int		nbr_len;
@@ -53,13 +52,14 @@ char	*ft_itoa(int n)
 		result[0] = '0';
 	while (nb > 0)
 	{
-		result[nbr_len--] = ((nb % 10) + '0');
+        nbr_len--;
+		result[nbr_len] = ((nb % 10) + '0');
 		nb = nb / 10;
 	}
 	return (result);
 }
-//int main (void)
-//{
-//	int s = -2147483648;
-//	printf("%s", ft_itoa(s));
-//}
+int main (void)
+{
+    int n = 2147483647;
+    printf("%s", ft_itoa(n));
+}
