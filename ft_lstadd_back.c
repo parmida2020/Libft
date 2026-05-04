@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 11:42:45 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/04 19:12:50 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/05/04 19:01:54 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/05/04 20:04:44 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*new;
+	t_list *last_node;
 
-	new = malloc(sizeof(t_list));
 	if (new == NULL)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+		return;
+	if (lst == NULL)
+	{
+		*lst = new;
+		return;
+	}
+	last_node = ft_lstlast(*lst);
+	last_node->next = new;
 }
 //int main(void)
 //{
-//    t_list *node = ft_lstnew("Hello");
-//    char *s = node->content;
-//    printf("%s\n", s);
 //}
-
-//    t_list *node1;
-//    t_list *node2;
-//    t_list *node3;
-//    t_list *node4;
-
-//    node1->next = node2;
-//    node1->next->next = node3;
-//    node1->next->next->next = node4;

@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 10:45:36 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/29 11:33:12 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/04 17:53:45 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		ft_toupper(int c);
 int		ft_atoi(const char *nptr);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_lstsize(t_list *lst);
 
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
@@ -50,6 +51,10 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
 
 char	*ft_itoa(int n);
 char	*ft_strdup(const char *s);

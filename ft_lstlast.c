@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 18:09:52 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/04 19:34:18 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/05/04 17:27:29 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/05/04 19:34:46 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	start;
-	size_t	end;
-
-	if (s1 == NULL || set == NULL)
+	if (lst == NULL)
 		return (NULL);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set, s1[end - 1]))
-		end--;
-	return (ft_substr(s1, start, end - start));
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }
 //int main (void)
 //{
-//    char *e = ft_strtrim("iiiiiii ikkkkii", NULL);
-//    printf("%s", e);
-//    free(e);
+
 //}
