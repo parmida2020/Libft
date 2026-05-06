@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 17:47:55 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/04 19:33:12 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/06 12:30:36 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,18 @@ char	*ft_itoa(int n)
 	long	nb;
 
 	nb = n;
-	nbr_len = len(n);
-	result = malloc(nbr_len + 1);
+	nbr_len = len(nb);
+	result = malloc(sizeof(char) * (nbr_len + 1));
 	if (result == NULL)
 		return (NULL);
 	result[nbr_len] = '\0';
+	if (nb == 0)
+		result[0] = '0';
 	if (nb < 0)
 	{
 		result[0] = '-';
 		nb = -nb;
 	}
-	if (n == 0)
-		result[0] = '0';
 	while (nb > 0)
 	{
 		nbr_len--;
@@ -61,6 +61,6 @@ char	*ft_itoa(int n)
 }
 //int main (void)
 //{
-//    int n = 2147483647;
+//    int n = 0;
 //    printf("%s", ft_itoa(n));
 //}

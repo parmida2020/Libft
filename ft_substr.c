@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:45:06 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/04 19:34:03 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/06 17:36:42 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*new;
 
 	if (s == NULL)
-		return(NULL);
+		return (NULL);
 	slen = ft_strlen(s);
 	if (start >= slen)
-		return(ft_strdup(""));
+		return (ft_strdup(""));
 	new = malloc((len + 1) * sizeof(char));
 	if (new == NULL)
 		return (NULL);
@@ -36,10 +36,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (new);
 }
-//int main(void)
-//{
-//	char *str = ft_substr("hello world", 1, 4);
-//	printf("%s\n", str);
-//	free (str);
-//	return 0;
-//}
+int main(void)
+{
+	char *str = ft_substr("hello world", 1, 4);
+	printf("%s\n", str);
+	free (str);
+	return 0;
+}
