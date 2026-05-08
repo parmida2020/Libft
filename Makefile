@@ -37,8 +37,6 @@ SRCS = ft_atoi.c\
 	ft_lstnew.c\
 	ft_lstadd_front.c\
 	ft_lstsize.c\
-	ft_lstlast.c\
-	ft_lstadd_back.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -58,4 +56,5 @@ fclean: clean
 
 re: fclean all
 
+bonus: all
 .PHONY: all clean fclean re

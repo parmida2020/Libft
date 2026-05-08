@@ -5,38 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 16:26:49 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/04 19:35:13 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/05/08 16:20:52 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/05/08 19:53:00 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+int ft_lstsize(t_list *lst)
 {
-	int	length;
+    int i;
 
-	length = 0;
-	while (lst != NULL)
-	{
-		lst = lst->next;
-		length++;
-	}
-	return (length);
+    i = 1;
+    if (!lst)
+        return(0);
+    while (lst->next != NULL)
+    {
+        lst = lst->next;
+        i++;
+    }
+    return (i);
 }
-//int main (void)
+//int main(void)
 //{
-//	t_list *a;
-//	a = NULL;
-//	ft_lstadd_front(&a, ft_lstnew("1"));
-//	ft_lstadd_front(&a, ft_lstnew("2"));
-//	ft_lstadd_front(&a, ft_lstnew("3"));
-//	ft_lstadd_front(&a, ft_lstnew("4"));
-//	ft_lstadd_front(&a, ft_lstnew("5"));
-//	ft_lstadd_front(&a, ft_lstnew("6"));
-//	ft_lstadd_front(&a, ft_lstnew("7"));
-//	ft_lstadd_front(&a, ft_lstnew("8"));
-//	ft_lstadd_front(&a, ft_lstnew("9"));
-//	int facts = ft_lstsize(a);
-//	printf("%d", facts);
+//    t_list node1;
+//    t_list node2;
+//    t_list node3;
+
+//    node1.content = "Hello";
+//    node1.next = &node2;
+    
+//    node2.content = "World";
+//    node2.next = &node3;
+    
+//    node3.content = "mida";
+//    node3.next = NULL;
+    
+//    printf("%d", ft_lstsize(&node1));
 //}

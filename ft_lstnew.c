@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 11:42:45 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/04 19:12:50 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/08 21:59:25 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*new;
-
-	new = malloc(sizeof(t_list));
-	if (new == NULL)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+    t_list *new;
+    new = malloc(sizeof(t_list));
+    if (!new)
+        return (NULL);
+    new->content = content;
+    new->next = NULL;
+    return (new);
 }
 //int main(void)
 //{
@@ -29,7 +28,6 @@ t_list	*ft_lstnew(void *content)
 //    char *s = node->content;
 //    printf("%s\n", s);
 //}
-
 //    t_list *node1;
 //    t_list *node2;
 //    t_list *node3;
