@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 11:20:35 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/21 20:08:36 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/11 17:48:46 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,35 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	lenlittle;
 
 	i = 0;
 	if (little[0] == '\0')
 		return ((char *)big);
-	while (big[i] && i < len)
+	lenlittle = ft_strlen((char *)little);
+	while (big[i] && (i + lenlittle <= len))
 	{
-		j = 0;
-		while (big[i + j] == little[j] && (i + j) < len)
-		{
-			if (little[i + j] == '\0')
-				return ((char *)(big + i));
-			j++;
-		}
+		if (ft_strncmp(&big[i], little, lenlittle) == 0)
+			return ((char *)&big[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 //#include <bsd/string.h>
 //int main(void)
 //{
 //    char str[100] = "hello my name is mida";
-//    char a[50] = "na";
+//    char a[1] ="\0";
 //    printf("%s\n", ft_strnstr(str, a, 10));
 
-//    const char *largestring = "Foo Bar Baz";
-//    const char *smallstring = "Bar";
-//    printf("%s\n", strnstr(largestring, smallstring, 8));
+//    //if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "lorem", 15)))
+//    //    return (0);
+//    //else
+//    //    return (str)
+
+//    char s[100] = "hello my name is mida";
+//    char ad[1] = "\0";
+//    printf("%s\n", strnstr(s, ad, 10));
 //}
 // first you find the first letter,, start comparing the other
 // letters in the word until the end

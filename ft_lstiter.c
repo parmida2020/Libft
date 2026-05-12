@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/08 19:56:13 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/11 10:55:32 by ppourraj         ###   ########.fr       */
+/*   Created: 2026/05/11 14:32:14 by ppourraj          #+#    #+#             */
+/*   Updated: 2026/05/11 16:06:59 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->next != NULL)
+	while (lst)
 	{
+		f(lst->content);
 		lst = lst->next;
 	}
-	return (lst);
 }
-//int main(void)
-//{
-//    t_list node;
-//    t_list node1;
-
-//    node.content = "Hello";
-//    node.next = &node1;
-
-//    node1.content = "mida";
-//    node1.next = NULL;
-
-//    printf("%s", (char *)ft_lstlast(&node)->content);
-//}

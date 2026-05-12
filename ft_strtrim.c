@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 18:09:52 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/06 17:36:28 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/11 17:50:37 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start));
 }
-int main (void)
-{
-    char *e = ft_strtrim("iiiiiihello worldiii", "i");
-    printf("%s", e);
-    free(e);
-}
+//int main (void)
+//{
+//    char *e = ft_strtrim("iiiiiihello worldiii", "i");
+//    printf("%s", e);
+//    free(e);
+//}

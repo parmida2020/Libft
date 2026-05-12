@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 19:32:51 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/08 18:54:56 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/11 10:49:04 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,24 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	srclen;
 	size_t	dstlen;
 	size_t	i;
-    size_t j;
-    
-    if(size == 0)
-        return (ft_strlen(src));
-    j = 0;
-    srclen = ft_strlen(src);
-    dstlen = ft_strlen(dst);
-    i = dstlen;
-    if(size <= dstlen)
-        return (size + srclen);
-    while(src[j] && dstlen < (size - 1))
-    {
-        dst[dstlen] = src[j];
-        dstlen++;
-        j++;
-    }
-    dst[dstlen] = '\0';
-    return (i + srclen);
-    
+	size_t	j;
+
+	if (size == 0)
+		return (ft_strlen(src));
+	j = 0;
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dst);
+	i = dstlen;
+	if (size <= dstlen)
+		return (size + srclen);
+	while (src[j] && dstlen < (size - 1))
+	{
+		dst[dstlen] = src[j];
+		dstlen++;
+		j++;
+	}
+	dst[dstlen] = '\0';
+	return (i + srclen);
 }
 //int main(void)
 //{
