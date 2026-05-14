@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:56:02 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/16 12:23:58 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/13 17:12:27 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (c + ('a' - 'A'));
+		return (c + 32);
 	return (c);
 }
 //int main (void)
 //{
-//	char a = 'k';
-//	printf("%d", ft_tolower(a));
+//	printf("%d", ft_tolower('k'));
 //}

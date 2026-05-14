@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 19:32:51 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/11 10:49:04 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/13 18:24:53 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstlen] = '\0';
 	return (i + srclen);
 }
+
+//#include <bsd/string.h>
 //int main(void)
 //{
 //	char str1[] = "abcde";

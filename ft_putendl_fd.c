@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 20:46:53 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/21 20:48:31 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 17:00:43 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,8 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
+
+//int main()
+//{
+//    ft_putendl_fd("hi", 1);
+//}

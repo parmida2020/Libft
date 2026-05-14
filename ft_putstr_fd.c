@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 20:41:55 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/21 20:45:06 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 16:59:29 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,8 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+
+//int main()
+//{
+//    ft_putstr_fd("Hello World !", 1);
+//}

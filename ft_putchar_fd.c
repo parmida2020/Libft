@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 20:29:16 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/21 20:45:43 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 16:58:26 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,8 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+//int main (void)
+//{
+//    ft_putchar_fd('p', 1);
+//}

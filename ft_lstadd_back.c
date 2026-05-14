@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 20:36:30 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/11 10:46:08 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 15:07:04 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,14 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	temp = ft_lstlast(*lst);
 	temp->next = new;
 }
+
+//int main(void)
+//{
+//    t_list *first;
+//    t_list *second;
+//    first = ft_lstnew("hello");
+//    second = ft_lstnew("world");
+//    ft_lstadd_back(&first, second);
+//    printf("%s\n", (char *)first->content);
+//    printf("%s\n", (char *)first->next->content);
+//}

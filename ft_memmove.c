@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 10:00:50 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/04 19:00:13 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:45:03 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 //    return 0;
 //}
-// handle overlapping memory safely 
-// if bothe src and dest are null we just return null

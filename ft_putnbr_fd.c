@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 20:49:50 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/22 13:09:25 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 17:02:24 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,12 @@ void	ft_putnbr_fd(int n, int fd)
 		n = -n;
 	}
 	if (n >= 10)
-	{
 		ft_putnbr_fd(n / 10, fd);
-	}
 	c = (n % 10) + '0';
 	write(fd, &c, 1);
 }
+
+//int main()
+//{
+//    ft_putnbr_fd(42, 1);
+//}

@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:39:15 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/16 12:24:03 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 10:49:57 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c - ('a' - 'A'));
+		return (c - 32);
 	return (c);
 }
 //int main (void)
 //{
-//	char a = 'v';
-//	printf("%d", ft_toupper(a));
+//	printf("%d\n", ft_toupper('v'));
+//	printf("%d\n", ft_toupper('{'));
+//	printf("%d\n", ft_toupper('`'));
 //}

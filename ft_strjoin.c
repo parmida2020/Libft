@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:00:42 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/29 15:27:20 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:47:34 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len2;
 	char	*join;
 
-	if (s1 == NULL || s2 == NULL)
+	if (!s1 || !s2)
 		return (NULL);
+	if (!s1)
+		return ((char *)s2);
+	if (!s2)
+		return ((char *)s1);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	join = malloc(len1 + len2 + 1);

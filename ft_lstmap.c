@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 15:05:52 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/11 16:06:31 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 16:37:25 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*node;
 	void	*new_cont;
 
-	if (!lst)
+	if (!lst || !del || !f)
 		return (NULL);
 	new_list = NULL;
 	while (lst)
@@ -36,3 +36,28 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+//void *add_dot(void *content)
+//{
+//    return (ft_strjoin((char *)content, "."));
+//}
+//void	del(void *content)
+//{
+//	free(content);
+//}
+//int	main(void)
+//{
+//	t_list	*list;
+//	t_list	*newlist;
+//	t_list	*temp;
+//	list = ft_lstnew("hello");
+//	ft_lstadd_back(&list, ft_lstnew("world"));
+//	newlist = ft_lstmap(list, add_dot, del);
+//    temp = newlist;
+//	while (temp)
+//	{
+//		printf("%s\n", (char *)temp->content);
+//		temp = temp->next;
+//	}
+//    ft_lstclear(&newlist, del);
+//	return (0);
+//}

@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 14:38:31 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/11 18:27:55 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:46:04 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,8 @@ static size_t	lettercount(char const *s, char c)
 
 static void	free_strings(char **s, size_t count)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < count)
-	{
-		free(s[i]);
-		i++;
-	}
+	while (count-- > 0)
+		free(s[count]);
 	free(s);
 }
 

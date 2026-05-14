@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 17:47:55 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/06 12:30:36 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 11:32:02 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,9 @@ char	*ft_itoa(int n)
 	}
 	return (result);
 }
+
 //int main (void)
 //{
-//    int n = 0;
+//    int n = 123;
 //    printf("%s", ft_itoa(n));
 //}

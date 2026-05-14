@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 11:31:16 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/16 10:34:09 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/13 12:22:34 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,10 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*#include <stdio.h>
-int main(void)
-{
-	char c = '0';
-	printf("%d\n", ft_isalpha(c));
-	char a = 'a';
-	printf("%d\n", ft_isalpha(a));
-	char b = 'A';
-	printf("%d\n", ft_isalpha(b));
-	char r = '&';
-	printf("%d", ft_isalpha(r));
-}*/
+//int main(void)
+//{
+//	printf("%d\n", ft_isalpha('0'));
+//	printf("%d\n", ft_isalpha(100000));
+//	printf("%d\n", ft_isalpha('A'));
+//	printf("%d", ft_isalpha('\n'));
+//}
