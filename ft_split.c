@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 14:38:31 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/14 14:46:04 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/15 16:15:16 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,16 +85,17 @@ char	**ft_split(char const *s, char c)
 	result[index] = NULL;
 	return (result);
 }
-//int main()
+//#include <stdio.h>
+//int main ()
 //{
-//	char const s[] = "there is a ball";
-//	char c = ' ';
-//	size_t i = 0;
-//	char **new = ft_split(s, c);
-//	while(new[i])
-//	{
-//		printf("%s", new[i]);
-//		i++;
-//	}
-//	free_strings(new, i);
+//    char **array;
+//    size_t i;
+//    array = ft_split("  hello w  orl  d ", ' ');
+//    i = 0;
+//    while (array[i])
+//    {
+//        printf("%s", array[i]);
+//        i++;
+//    }
+//    free (array);
 //}

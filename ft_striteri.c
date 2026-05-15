@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:08:15 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/29 11:31:21 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 17:25:41 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 //    ft_striteri(str, vowels_to_);
 //    printf("After : %s\n", str);
 
-//    char s[] = "Hello Mida";
+//    char s[] = "Hello world";
 //    printf("Before : %s\n", s);
 //    ft_striteri(s, vowels_to_);
 //    printf("After : %s\n", s);

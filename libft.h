@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 10:45:36 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/14 11:52:43 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 17:40:27 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <string.h>
-# include <stdio.h>
 # include <stdlib.h>
+# include <stddef.h>
 # include <stdint.h>
 
 typedef struct s_list

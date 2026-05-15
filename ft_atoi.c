@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:42:27 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/05/14 13:51:33 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 17:47:34 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
+//#include <stdio.h>
 //int main(void)
 //{
-//    char str[100] = "   -123abSd";
+//    char str[100] = "   --+--123abSd";
 //    printf("%d\n", atoi(str));
 //    printf("%d\n", ft_atoi(str));
 //}

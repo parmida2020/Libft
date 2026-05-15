@@ -6,7 +6,7 @@
 /*   By: ppourraj <ppourraj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 17:34:52 by ppourraj          #+#    #+#             */
-/*   Updated: 2026/04/29 10:46:14 by ppourraj         ###   ########.fr       */
+/*   Updated: 2026/05/14 17:25:50 by ppourraj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 //}
 //int main(void)
 //{
-//	char *str = "abcde";
+//	char *str = "abcdefg";
 //	char *str2 = ft_strmapi(str, *ft_toup);
 //	printf("%s", str2);
 //}
